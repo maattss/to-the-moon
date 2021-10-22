@@ -12,6 +12,6 @@ public class Score : MonoBehaviour
     void Update()
     {
         time = Time.time*10;
-        scoreText.text = time.ToString("0");
+        scoreText.text = "Score: " + time.ToString("0");
     }
 }
