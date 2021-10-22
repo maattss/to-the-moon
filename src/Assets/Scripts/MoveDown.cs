@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveDown : MonoBehaviour
 {
-
+    public bool Remove = true;
     Vector3 vec;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +19,7 @@ public class MoveDown : MonoBehaviour
         vec.y -= Time.deltaTime * 10;
         transform.position = vec;
 
-        if (vec.y < -20)
+        if (vec.y < -20 && Remove)
         {
             Destroy(this.gameObject);
         }
