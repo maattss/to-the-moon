@@ -16,7 +16,7 @@ public class MoveDown : MonoBehaviour
     void Update()
     {
         vec = transform.position;
-        vec.y -= Time.deltaTime;
+        vec.y -= Time.deltaTime * 10;
         transform.position = vec;
 
         if (vec.y < -20)
