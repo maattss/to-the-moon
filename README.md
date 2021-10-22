@@ -1,2 +1,2 @@
-# to-the-moon
+# To The Moon Bouvet GameJam
  
