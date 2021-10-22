@@ -15,6 +15,7 @@ public class MoveDown : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Time.realtimeSinceStartup < 4) return;
         vec = transform.position;
         vec.y -= Time.deltaTime * 10;
         transform.position = vec;
