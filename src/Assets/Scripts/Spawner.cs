@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public Transform fuelcan;
-    public Transform astroid;
+    public List<Transform> fuelcans;
+    public List<Transform> astroids;
 
     private float lastSpawn;
     public int spawnRate;
@@ -21,10 +21,14 @@ public class Spawner : MonoBehaviour
         if (Time.realtimeSinceStartup - lastSpawn > spawnRate)
         {
             lastSpawn = Time.realtimeSinceStartup;
-            var newTransform = Instantiate(fuelcan, new Vector3(Random.value * 20 - 10, 20, 0), Quaternion.identity);
-            newTransform.gameObject.SetActive(true);
-            var newTransform2 = Instantiate(astroid, new Vector3(Random.value * 20 - 10, 20, 0), Quaternion.identity);
-            newTransform2.gameObject.SetActive(true);
+            Spawn(fuelcans[Random.Range(0, fuelcans.Count)]);
+            Spawn(astroids[Random.Range(0, astroids.Count)]);
         }
+    }
+
+    private void Spawn(Transform transform)
+    {
+        var newTransform = Instantiate(transform, new Vector3(Random.value * 20 - 10, 20, 0), transform.rotation);
+        newTransform.gameObject.SetActive(true);
     }
 }
