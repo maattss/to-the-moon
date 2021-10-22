@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    public Transform prefab;
+    public Transform fuelcan;
+    public Transform astroid;
+
     private float lastSpawn;
     public int spawnRate;
     // Start is called before the first frame update
@@ -19,7 +21,7 @@ public class Spawner : MonoBehaviour
         if (Time.realtimeSinceStartup - lastSpawn > spawnRate)
         {
             lastSpawn = Time.realtimeSinceStartup;
-            var newTransform = Instantiate(prefab, new Vector3(0, 10, 0), Quaternion.identity);
+            var newTransform = Instantiate(fuelcan, new Vector3(Random.value * 10, 10, 0), Quaternion.identity);
             newTransform.gameObject.SetActive(true);
         }
     }
