@@ -7,6 +7,6 @@ public class CollisionDetector : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         Destroy(this.gameObject);
-        Debug.Log("Test Message");
+        //Debug.Log("Test Message");
     }
 }
