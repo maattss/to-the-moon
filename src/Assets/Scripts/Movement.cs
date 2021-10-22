@@ -31,7 +31,6 @@ public class Movement : MonoBehaviour
 
         facingAngle = Mathf.Clamp(facingAngle, -70, 70);
         transform.localPosition = Vec;
-        Debug.Log($"{facingAngle}");
         transform.localRotation = Quaternion.Euler(0,180,0) * Quaternion.AngleAxis(facingAngle + Mathf.PI, new Vector3(0, 1, 0));
         
     }
