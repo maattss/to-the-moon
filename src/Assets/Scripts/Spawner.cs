@@ -23,6 +23,8 @@ public class Spawner : MonoBehaviour
             lastSpawn = Time.realtimeSinceStartup;
             var newTransform = Instantiate(fuelcan, new Vector3(Random.value * 20 - 10, 20, 0), Quaternion.identity);
             newTransform.gameObject.SetActive(true);
+            var newTransform2 = Instantiate(astroid, new Vector3(Random.value * 20 - 10, 20, 0), Quaternion.identity);
+            newTransform2.gameObject.SetActive(true);
         }
     }
 }
