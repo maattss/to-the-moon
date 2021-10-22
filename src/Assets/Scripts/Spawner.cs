@@ -21,7 +21,7 @@ public class Spawner : MonoBehaviour
         if (Time.realtimeSinceStartup - lastSpawn > spawnRate)
         {
             lastSpawn = Time.realtimeSinceStartup;
-            var newTransform = Instantiate(fuelcan, new Vector3(Random.value * 10, 10, 0), Quaternion.identity);
+            var newTransform = Instantiate(fuelcan, new Vector3(Random.value * 20 - 10, 20, 0), Quaternion.identity);
             newTransform.gameObject.SetActive(true);
         }
     }
