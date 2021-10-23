@@ -20,12 +20,10 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         if (moonManager.State.PreventSpawn) return;
-        if (Time.realtimeSinceStartup - lastSpawn > spawnRate)
         if (Time.realtimeSinceStartup >= nextSpawn)
         {
             nextSpawn = Time.realtimeSinceStartup + Random.Range(minSpawnTime, maxSpawnTime);
             Spawn(objects[Random.Range(0, objects.Count)]);
-
         }
     }
 
