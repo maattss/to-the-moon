@@ -28,7 +28,7 @@ public class MoonManager : MonoBehaviour
         State = new State();
         AddModifier(s =>
         {
-            s.FallSpeed += Time.time;
+            s.FallSpeed += Time.time / 2;
         }, -1);
     }
 

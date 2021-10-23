@@ -38,6 +38,13 @@ public class CollisionDetector : MonoBehaviour
                     s.MovementSpeed *= 2;
                 }, 5);
             }
+            else if (Type == CollisionType.InfiniteFuel)
+            {
+                moonManager.AddModifier(s =>
+                {
+                    s.FuelConsumption = 0;
+                }, 5);
+            }
         }
 
         Destroy(this.gameObject);
@@ -64,5 +71,6 @@ public class CollisionDetector : MonoBehaviour
         Refule,
         DoubleSpeed,
         Slowmo,
+        InfiniteFuel,
     }
 }

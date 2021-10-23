@@ -418,8 +418,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 180b639bead8bec42a933086aac29da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 20
   fuelLevel: 100
+--- !u!1001 &358541261
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 567877903}
+    m_Modifications:
+    - target: {fileID: 100000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+      propertyPath: m_Name
+      value: Gas_CanInfin
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -5.4489956
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5050001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.7581835
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+--- !u!4 &358541262 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: a25bb3126b472784390458eba2e4b6eb, type: 3}
+  m_PrefabInstance: {fileID: 358541261}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &526991079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -517,8 +594,9 @@ MonoBehaviour:
   objects:
   - {fileID: 1493261333}
   - {fileID: 986528144}
-  minSpawnTime: 3
-  maxSpawnTime: 5
+  - {fileID: 358541262}
+  minSpawnTime: 5
+  maxSpawnTime: 8
   nextSpawn: 5
 --- !u!4 &567877903
 Transform:
@@ -533,6 +611,7 @@ Transform:
   m_Children:
   - {fileID: 1493261333}
   - {fileID: 986528144}
+  - {fileID: 358541262}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -766,6 +845,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoubleSpeed
       objectReference: {fileID: 0}
+    - target: {fileID: 2383821297007518606, guid: 446f73682b3726f46925de99d36e9dad, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 446f73682b3726f46925de99d36e9dad, type: 3}
 --- !u!4 &986528144 stripped
@@ -904,6 +987,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SlowMotion
       objectReference: {fileID: 0}
+    - target: {fileID: 3315446200559077649, guid: 19125dbdbc067944b8e0ddc7fe5606de, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3315446200559077661, guid: 19125dbdbc067944b8e0ddc7fe5606de, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -948,8 +1035,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7837159436145266506, guid: 19125dbdbc067944b8e0ddc7fe5606de, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 19125dbdbc067944b8e0ddc7fe5606de, type: 3}
 --- !u!4 &1493261333 stripped
 Transform:
@@ -987,8 +1073,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objects:
   - {fileID: 2090532811}
-  minSpawnTime: 3
-  maxSpawnTime: 5
+  minSpawnTime: 2
+  maxSpawnTime: 4
   nextSpawn: 5
 --- !u!4 &1541968224
 Transform:
@@ -1416,8 +1502,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1877784323}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: -0.4294, y: 79.8698, z: 1.57}
-  m_LocalScale: {x: 3.9960198, y: 1, z: 15.999928}
+  m_LocalPosition: {x: 0.1961, y: 505.6416, z: 1.57}
+  m_LocalScale: {x: 3.8710153, y: 1, z: 101.54091}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
@@ -1469,8 +1555,8 @@ MonoBehaviour:
   - {fileID: 2017755060}
   - {fileID: 1909487128}
   - {fileID: 1132886843}
-  minSpawnTime: 1
-  maxSpawnTime: 3
+  minSpawnTime: 0.1
+  maxSpawnTime: 2
   nextSpawn: 8
 --- !u!4 &1890203134
 Transform:
