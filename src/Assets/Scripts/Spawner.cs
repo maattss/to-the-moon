@@ -7,8 +7,6 @@ public class Spawner : MonoBehaviour
     public List<Transform> objects;
     public float minSpawnTime, maxSpawnTime, nextSpawn;
 
-    private float lastSpawn;
-    public int spawnRate;
     MoonManager moonManager;
     // Start is called before the first frame update
     void Start()
