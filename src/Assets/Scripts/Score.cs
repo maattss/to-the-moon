@@ -17,7 +17,6 @@ public class Score : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime * moonManager.State.ScoreIncrement;
-        scoreText.text = "Score: " + time.ToString("0");
+        scoreText.text = "Score: " + moonManager.Score.ToString("0");
     }
 }

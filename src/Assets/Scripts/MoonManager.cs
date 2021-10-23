@@ -19,6 +19,7 @@ public class MoonManager : MonoBehaviour
 
     public Movement player;
     public bool GodMode = false;
+    public float Score = 0;
 
     private List<Modifier> Modifiers { get; set; } = new List<Modifier>();
     private List<Modifier> ForRemoval { get; set; } = new List<Modifier>();
@@ -63,6 +64,8 @@ public class MoonManager : MonoBehaviour
             Modifiers.Remove(m);
         }
         ForRemoval.Clear();
+        Score += (Time.deltaTime * state.ScoreIncrement);
+        Debug.Log(Score);
         State = state;
     }
 

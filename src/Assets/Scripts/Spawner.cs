@@ -5,7 +5,7 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public List<Transform> objects;
-    public float minSpawnTime, maxSpawnTime, nextSpawn;
+    public float minSpawnTime, maxSpawnTime, nextSpawn, maxSpawnArea, minSpawnArea;
 
     MoonManager moonManager;
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class Spawner : MonoBehaviour
     void Update()
     {
         if (moonManager.State.PreventSpawn) return;
-        if (Time.realtimeSinceStartup >= nextSpawn)
+        if (Time.realtimeSinceStartup >= nextSpawn && moonManager.Score > minSpawnArea && moonManager.Score < maxSpawnArea)
         {
             nextSpawn = Time.realtimeSinceStartup + Random.Range(minSpawnTime, maxSpawnTime);
             Spawn(objects[Random.Range(0, objects.Count)]);
