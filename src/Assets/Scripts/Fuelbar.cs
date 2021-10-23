@@ -5,8 +5,8 @@ public class Fuelbar : MonoBehaviour
 {
     [SerializeField]
     private Slider slider;
-    [SerializeField]
-    private Image sliderBar;
+    public Image sliderImage;
+
     public Movement Movement;
 
 
@@ -14,9 +14,17 @@ public class Fuelbar : MonoBehaviour
     void Update()
     {
         slider.value = Movement.fuelLevel;
-        if(slider.value <= 0)
+        if (slider.value >= 60)
         {
-            sliderBar.color = Color.clear;
+            sliderImage.color = Color.green;
+        }
+        if (slider.value >= 20 && slider.value < 60)
+        {
+            sliderImage.color = Color.yellow;
+        }
+        if (slider.value < 20)
+        {
+            sliderImage.color = Color.red;
         }
     }
 }

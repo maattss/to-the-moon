@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MoonManager : MonoBehaviour
 {
@@ -23,14 +24,18 @@ public class MoonManager : MonoBehaviour
 
     private List<Modifier> Modifiers { get; set; } = new List<Modifier>();
     private List<Modifier> ForRemoval { get; set; } = new List<Modifier>();
+    private Queue<float> LastSpawnLocations = new Queue<float>();
+    private float startTime = 0;
+    public float runtime = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        startTime = Time.realtimeSinceStartup;
         State = new State();
         AddModifier(s =>
         {
-            s.FallSpeed += Time.time / 2;
+            s.FallSpeed += runtime / 2;
         }, -1);
     }
 
@@ -46,6 +51,12 @@ public class MoonManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        runtime = Time.realtimeSinceStartup - startTime;
+        if (Input.GetKey(KeyCode.R))
+        {
+            SceneManager.LoadScene("MainGameScene");
+        }
+
         if (gameOver)
         {
             State = gameOverState;
@@ -67,6 +78,7 @@ public class MoonManager : MonoBehaviour
         Score += (Time.deltaTime * state.ScoreIncrement);
         Debug.Log(Score);
         State = state;
+
     }
 
     public void GameOver()
@@ -75,6 +87,27 @@ public class MoonManager : MonoBehaviour
             return;
         gameOver = true;
         Destroy(player.gameObject);
+    }
+
+    public float GetSpawnLocation()
+    {
+        var location = UnityEngine.Random.value * 20 - 10;
+        bool collide = true;
+        while (collide)
+        {
+            location = UnityEngine.Random.value * 20 - 10;
+            
+            foreach (var last in LastSpawnLocations)
+            {
+                if (Mathf.Abs(last - location) < 4)
+                    continue;
+            }
+            break;
+        }
+        LastSpawnLocations.Enqueue(location);
+        if (LastSpawnLocations.Count > 4)
+            LastSpawnLocations.Dequeue();
+        return location;
     }
 }
 
