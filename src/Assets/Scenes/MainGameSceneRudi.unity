@@ -1355,7 +1355,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuelcans:
   - {fileID: 2090532811}
-  - {fileID: 788555768}
   astroids:
   - {fileID: 1132886843}
   - {fileID: 1909487128}
