@@ -85,7 +85,7 @@ public class MoonManager : MonoBehaviour
     {
         if (GodMode)
             return;
-        SceneManager.LoadScene("MainGameOver");
+        SceneManager.LoadScene("NewGameOver");
         gameOver = true;
         Destroy(player.gameObject);
     }
