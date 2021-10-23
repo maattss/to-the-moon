@@ -14,6 +14,10 @@ public class Fuelbar : MonoBehaviour
     void Update()
     {
         slider.value = Movement.fuelLevel;
+        if (slider.value >= 60)
+        {
+            sliderImage.color = Color.green;
+        }
         if (slider.value >= 20 && slider.value < 60)
         {
             sliderImage.color = Color.yellow;
