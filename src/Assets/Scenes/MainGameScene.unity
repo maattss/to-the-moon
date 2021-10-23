@@ -2021,6 +2021,10 @@ PrefabInstance:
       propertyPath: sliderBar
       value: 
       objectReference: {fileID: 1978193345}
+    - target: {fileID: 7828627502502795601, guid: 89a08824db032974889303a5305781cf, type: 3}
+      propertyPath: sliderImage
+      value: 
+      objectReference: {fileID: 1978193345}
     - target: {fileID: 7828627502502795606, guid: 89a08824db032974889303a5305781cf, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -342.9
