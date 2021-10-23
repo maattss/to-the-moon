@@ -96,13 +96,12 @@ public class MoonManager : MonoBehaviour
         while (collide)
         {
             location = UnityEngine.Random.value * 20 - 10;
-            
+            collide = false;
             foreach (var last in LastSpawnLocations)
             {
-                if (Mathf.Abs(last - location) < 4)
-                    continue;
+                if (Mathf.Abs(last - location) < 2)
+                    collide = true;
             }
-            break;
         }
         LastSpawnLocations.Enqueue(location);
         if (LastSpawnLocations.Count > 4)
