@@ -24,6 +24,20 @@ public class CollisionDetector : MonoBehaviour
             {
                 movement.fuelLevel = 100;
             }
+            else if (Type == CollisionType.Slowmo)
+            {
+                moonManager.AddModifier(s =>
+                {
+                    s.FallSpeed /= 2;
+                }, 5);
+            }
+            else if (Type == CollisionType.DoubleSpeed)
+            {
+                moonManager.AddModifier(s =>
+                {
+                    s.MovementSpeed *= 2;
+                }, 5);
+            }
         }
 
         Destroy(this.gameObject);
@@ -48,5 +62,7 @@ public class CollisionDetector : MonoBehaviour
         None,
         GameOver,
         Refule,
+        DoubleSpeed,
+        Slowmo,
     }
 }

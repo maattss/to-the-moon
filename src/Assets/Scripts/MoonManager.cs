@@ -34,12 +34,11 @@ public class MoonManager : MonoBehaviour
 
     public void AddModifier(Action<State> modifier, float activeInSec)
     {
-        if (activeInSec < 0)
-            Modifiers.Add(new Modifier()
-            {
-                Action = modifier,
-                EndTime = activeInSec < 0 ? -1 : Time.realtimeSinceStartup + activeInSec
-            });
+        Modifiers.Add(new Modifier()
+        {
+            Action = modifier,
+            EndTime = activeInSec < 0 ? -1 : Time.realtimeSinceStartup + activeInSec
+        });
     }
 
     // Update is called once per frame

@@ -5,10 +5,8 @@ using UnityEngine.UI;
 
 public class Movement : MonoBehaviour
 {
-    float prevAngle = 0;
     float facingAngle = 0;
     Vector3 Vec;
-    public int movementSpeed = 20;
     public float fuelLevel = 100;
     MoonManager moonManager;
     // Start is called before the first frame update
