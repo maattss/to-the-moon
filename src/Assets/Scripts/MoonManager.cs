@@ -24,15 +24,17 @@ public class MoonManager : MonoBehaviour
     private List<Modifier> Modifiers { get; set; } = new List<Modifier>();
     private List<Modifier> ForRemoval { get; set; } = new List<Modifier>();
     private Queue<float> LastSpawnLocations = new Queue<float>();
+    private float startTime = 0;
+    public float runtime = 0;
 
     // Start is called before the first frame update
     void Start()
     {
+        startTime = Time.realtimeSinceStartup;
         State = new State();
         AddModifier(s =>
         {
-            s.FallSpeed += Time.time / 2;
-            Debug.Log(Time.time);
+            s.FallSpeed += runtime / 2;
         }, -1);
     }
 
@@ -48,6 +50,7 @@ public class MoonManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        runtime = Time.realtimeSinceStartup - startTime;
         if (Input.GetKey(KeyCode.R))
         {
             SceneManager.LoadScene("MainGameScene");

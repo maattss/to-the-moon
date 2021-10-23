@@ -53,7 +53,7 @@ public class CollisionDetector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Time.realtimeSinceStartup < 4) return;
+        if (moonManager.runtime < 1.5f) return;
         vec = transform.position;
         vec.y -= Time.deltaTime * moonManager.State.FallSpeed;
         transform.position = vec;
