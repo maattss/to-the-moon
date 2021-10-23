@@ -22,6 +22,7 @@ public class MoonManager : MonoBehaviour
 
     private List<Modifier> Modifiers { get; set; } = new List<Modifier>();
     private List<Modifier> ForRemoval { get; set; } = new List<Modifier>();
+    private Queue<float> LastSpawnLocations = new Queue<float>();
 
     // Start is called before the first frame update
     void Start()
@@ -72,6 +73,27 @@ public class MoonManager : MonoBehaviour
             return;
         gameOver = true;
         Destroy(player.gameObject);
+    }
+
+    public float GetSpawnLocation()
+    {
+        var location = UnityEngine.Random.value * 20 - 10;
+        bool collide = true;
+        while (collide)
+        {
+            location = UnityEngine.Random.value * 20 - 10;
+            
+            foreach (var last in LastSpawnLocations)
+            {
+                if (Mathf.Abs(last - location) < 4)
+                    continue;
+            }
+            break;
+        }
+        LastSpawnLocations.Enqueue(location);
+        if (LastSpawnLocations.Count > 4)
+            LastSpawnLocations.Dequeue();
+        return location;
     }
 }
 

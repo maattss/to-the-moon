@@ -27,7 +27,7 @@ public class Spawner : MonoBehaviour
 
     private Transform Spawn(Transform transform)
     {
-        var newTransform = Instantiate(transform, new Vector3(Random.value * 20 - 10, 20, 0), transform.rotation);
+        var newTransform = Instantiate(transform, new Vector3(moonManager.GetSpawnLocation(), 20, 0), transform.rotation);
         newTransform.gameObject.SetActive(true);
         return newTransform;
     }
