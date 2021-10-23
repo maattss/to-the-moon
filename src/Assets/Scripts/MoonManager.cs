@@ -100,12 +100,12 @@ public class MoonManager : MonoBehaviour
             collide = false;
             foreach (var last in LastSpawnLocations)
             {
-                if (Mathf.Abs(last - location) < 2)
+                if (Mathf.Abs(last - location) < 3)
                     collide = true;
             }
         }
         LastSpawnLocations.Enqueue(location);
-        if (LastSpawnLocations.Count > 4)
+        if (LastSpawnLocations.Count > 2)
             LastSpawnLocations.Dequeue();
         return location;
     }
