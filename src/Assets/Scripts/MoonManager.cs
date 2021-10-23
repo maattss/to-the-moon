@@ -67,13 +67,14 @@ public class MoonManager : MonoBehaviour
 
     public void GameOver()
     {
+        return;
         gameOver = true;
         Destroy(player.gameObject);
     }
 }
 
 public class Modifier
-{ 
+{
     public Action<State> Action { get; set; }
     public float EndTime { get; set; }
 }
