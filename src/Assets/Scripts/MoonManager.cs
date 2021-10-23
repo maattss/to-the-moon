@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MoonManager : MonoBehaviour
 {
@@ -31,6 +32,7 @@ public class MoonManager : MonoBehaviour
         AddModifier(s =>
         {
             s.FallSpeed += Time.time / 2;
+            Debug.Log(Time.time);
         }, -1);
     }
 
@@ -46,6 +48,11 @@ public class MoonManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKey(KeyCode.R))
+        {
+            SceneManager.LoadScene("MainGameScene");
+        }
+
         if (gameOver)
         {
             State = gameOverState;
@@ -65,6 +72,7 @@ public class MoonManager : MonoBehaviour
         }
         ForRemoval.Clear();
         State = state;
+
     }
 
     public void GameOver()
