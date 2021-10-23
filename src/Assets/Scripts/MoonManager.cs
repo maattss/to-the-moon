@@ -18,6 +18,7 @@ public class MoonManager : MonoBehaviour
     bool gameOver = false;
 
     public Movement player;
+    public bool GodMode = false;
 
     private List<Modifier> Modifiers { get; set; } = new List<Modifier>();
     private List<Modifier> ForRemoval { get; set; } = new List<Modifier>();
@@ -67,7 +68,8 @@ public class MoonManager : MonoBehaviour
 
     public void GameOver()
     {
-        return;
+        if (GodMode)
+            return;
         gameOver = true;
         Destroy(player.gameObject);
     }
