@@ -611,9 +611,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 767820602}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be8fe859c3cf03a49ab0e97970260281, type: 3}
+  m_Script: {fileID: 11500000, guid: ae15a0dc1e5a38b41ba19e6bc8891b0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 0
   Remove: 1
 --- !u!1 &1132886837 stripped
 GameObject:
@@ -646,6 +647,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Remove: 1
+  vec: {x: 0, y: 0, z: 0}
 --- !u!114 &1132886840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -659,6 +661,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 1
+  Remove: 1
 --- !u!4 &1132886843 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 469044, guid: 04d0bf4be9447154188d86f6e3b8dce9, type: 3}
@@ -782,6 +785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Remove: 1
+  vec: {x: 0, y: 0, z: 0}
 --- !u!65 &1565124689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -871,6 +875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 2
+  Remove: 1
 --- !u!54 &1565124694
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -922,6 +927,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 1
+  Remove: 1
 --- !u!114 &1569478540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,6 +941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Remove: 1
+  vec: {x: 0, y: 0, z: 0}
 --- !u!54 &1569478541
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1198,9 +1205,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1877784323}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be8fe859c3cf03a49ab0e97970260281, type: 3}
+  m_Script: {fileID: 11500000, guid: ae15a0dc1e5a38b41ba19e6bc8891b0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Type: 0
   Remove: 0
 --- !u!1 &1890203132
 GameObject:
@@ -1283,6 +1291,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Remove: 1
+  vec: {x: 0, y: 0, z: 0}
 --- !u!114 &1909487125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1296,6 +1305,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 1
+  Remove: 1
 --- !u!4 &1909487128 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 446090, guid: 84cc3cd234dfc9d4d9d2e92c0eb0af75, type: 3}
@@ -1558,6 +1568,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Remove: 1
+  vec: {x: 0, y: 0, z: 0}
 --- !u!114 &2017755057
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1571,6 +1582,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 1
+  Remove: 1
 --- !u!4 &2017755060 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 494976, guid: fa49e460baf435b4780da7196c2ab473, type: 3}
@@ -1599,6 +1611,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Type: 2
+  Remove: 1
 --- !u!114 &2090532813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1612,6 +1625,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Remove: 1
+  vec: {x: 0, y: 0, z: 0}
 --- !u!54 &2090532814
 Rigidbody:
   m_ObjectHideFlags: 0
