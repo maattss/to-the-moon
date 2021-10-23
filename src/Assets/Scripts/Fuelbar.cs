@@ -11,10 +11,6 @@ public class Fuelbar : MonoBehaviour
 
 
     // Update is called once per frame
-    void Start()
-    {
-        //sliderImage.color = Color.red;
-    }
     void Update()
     {
         slider.value = Movement.fuelLevel;
